@@ -21,10 +21,21 @@ export const GlobalStyle = createGlobalStyle`
         }
         -ms-overflow-style: none;
         scrollbar-width: none;
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #EDEDED;
+        font-family: 'NEXON Lv1 Gothic OTF';
     }
     body{
         margin: 0px;
         padding: 0px;
+        width: 100%;
+        max-width: 576px;
+        background-color: white;
     }
     button {
         background: none;
@@ -36,7 +47,30 @@ export const GlobalStyle = createGlobalStyle`
             fill: #f2f3f4;
         }
     }
-
+    @font-face {
+        font-family: 'NEXON Lv1 Gothic OTF';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'NEXON Lv1 Gothic OTF Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'NEXON Lv2 Gothic';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'NEXON Lv2 Gothic Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
     .pc-tablet-only {
         display: block;
         ${media.mobile} {

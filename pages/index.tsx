@@ -1,8 +1,12 @@
 import type { NextPage } from "next";
+import Nav from "../components/Nav";
 
 const Home: NextPage = () => {
   return (
-    <div>Next-basics</div>
+    <>
+      <Nav/>
+      <div>Home</div>
+    </>
   )
 }
 
