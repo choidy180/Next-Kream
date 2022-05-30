@@ -8,7 +8,6 @@ import Link from "next/link";
 const Nav: NextPage = () => {
   const path = useRouter();
   const [Navigator, setNavigator] = useState(path.pathname);
-  console.log(Navigator);
   return (
     <>
       {(Navigator === "/" || Navigator.includes("/release")) && 

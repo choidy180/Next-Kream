@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100vw;
         height: auto;
         min-height: 100vh;
+        max-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -34,6 +35,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0px;
         padding: 0px;
         width: 100%;
+        height: 100vh;
         max-width: 576px;
         background-color: white;
     }
@@ -62,6 +64,18 @@ export const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'NEXON Lv2 Gothic';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'NEXON Lv2 Gothic Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Tium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/Tium.woff2') format('woff2');
         font-weight: normal;
         font-style: normal;
     }
