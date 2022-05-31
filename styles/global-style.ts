@@ -49,6 +49,37 @@ export const GlobalStyle = createGlobalStyle`
             fill: #f2f3f4;
         }
     }
+    .ChevronBackOutline{
+        position: absolute;
+        z-index: 10;
+        top: 320px;
+        cursor: pointer;
+        color: red;
+        font-weight: 900;
+        font-size:4rem;
+    }
+    .ChevronForwardOutline{
+        position: absolute;
+        z-index: 10;
+        top: 320px;
+        right: 10px;
+        cursor: pointer;
+        color: white;
+        font-weight: 900;
+    }
+
+.right{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 10px;
+    cursor: pointer;
+    color: red;
+    font-weight: 900;
+    font-size:4rem;
+}
     @font-face {
         font-family: 'NEXON Lv1 Gothic OTF';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');

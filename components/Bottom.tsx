@@ -99,7 +99,7 @@ const Bottom: NextPage = () => {
 }
 
 const Container = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 99999;
   bottom: 0;
   width: 100%;
@@ -108,10 +108,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 `
 const Box = styled.div`
   width: 20%;
-  padding: 5px 0;
+  padding: 12px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
