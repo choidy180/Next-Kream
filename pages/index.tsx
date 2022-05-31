@@ -39,91 +39,105 @@ const Home: NextPage = () => {
         onClick={clickRightButton}
         cssClasses={'ChevronForwardOutline'}
       />
-      <MainImageContainer ref={container_Carousel}>
-        <AutoHeightImageWrapper>
-          <Image
-            className="autoImage"
-            alt=""
-            src={"/images/277694051_143621378154748_4393892377502772698_n.jpg"}
-            layout='fill'
-            objectFit='contain'
-          />
-        </AutoHeightImageWrapper>
-        <AutoHeightImageWrapper>
-          <Image
-            className="autoImage"
-            alt=""
-            src={"/images/277694051_143621378154748_4393892377502772698_n.jpg"}
-            layout='fill'
-            objectFit='contain'
-          />
-        </AutoHeightImageWrapper>
-        <AutoHeightImageWrapper>
-          <Image
-            className="autoImage"
-            alt=""
-            src={"/images/277694051_143621378154748_4393892377502772698_n.jpg"}
-            layout='fill'
-            objectFit='contain'
-          />
-        </AutoHeightImageWrapper>
-        <AutoHeightImageWrapper>
-          <Image
-            className="autoImage"
-            alt=""
-            src={"/images/277694051_143621378154748_4393892377502772698_n.jpg"}
-            layout='fill'
-            objectFit='contain'
-          />
-        </AutoHeightImageWrapper>
-      </MainImageContainer>
+      <HeadImageWrapper>
+        <HeadImageBox ref={container_Carousel}>
+          <HeadImage>
+            <Image
+              alt=""
+              src={"/images/item/8a0b876907e14030aad6eb00716a05b6_20220504165423.jpg"}
+              layout='fill'
+              objectFit='cover'
+            />
+          </HeadImage>
+          <HeadImage>
+            <Image
+              alt=""
+              src={"/images/item/ce34023d647b4fbda5f8721d6b5564f5_20220504201013.jpg"}
+              layout='fill'
+              objectFit='cover'
+            />
+          </HeadImage>
+          <HeadImage>
+            <Image
+              alt=""
+              src={"/images/item/da6e9f3e96494390826f625b20d4d912_20220504175902.png"}
+              layout='fill'
+              objectFit='cover'
+            />
+          </HeadImage>
+          <HeadImage>
+            <Image
+              alt=""
+              src={"/images/item/43fc39f1b0d84891a4c8480f74f77467_20220504165958.jpg"}
+              layout='fill'
+              objectFit='cover'
+            />
+          </HeadImage>
+        </HeadImageBox>
+      </HeadImageWrapper>
       <ShortcutCollection>
-        <ShortcutItem>
-          <Image
-              alt=""
-              src={"/images/item/short/short1.jpeg"}
-              layout='fill'
-              objectFit='cover'
-              onClick={clickShort}
-            />
-        </ShortcutItem>
-        <ShortcutItem>
-          <Image
-              alt=""
-              src={"/images/item/short/short2.jpeg"}
-              layout='fill'
-              objectFit='cover'
-              onClick={clickShort}
-            />
-        </ShortcutItem>
-        <ShortcutItem>
-          <Image
-              alt=""
-              src={"/images/item/short/short3.png"}
-              layout='fill'
-              objectFit='cover'
-              onClick={clickShort}
-            />
-        </ShortcutItem>
-        <ShortcutItem>
-          <Image
-              alt=""
-              src={"/images/item/short/short4.png"}
-              layout='fill'
-              objectFit='cover'
-              onClick={clickShort}
-            />
-        </ShortcutItem>
-        <ShortcutItem>
-          <Image
-              alt=""
-              src={"/images/item/short/short5.png"}
-              layout='fill'
-              objectFit='cover'
-              onClick={clickShort}
-            />
-        </ShortcutItem>
+        <ShortWrapper>
+          <ShortBox>
+            <ShortContent>
+              <Image
+                alt=""
+                src={"/images/item/short/short1.jpeg"}
+                layout='fill'
+                objectFit='cover'
+                onClick={clickShort}
+              />
+            </ShortContent>
+          </ShortBox>
+          <ShortBox>
+            <ShortContent>
+              <Image
+                alt=""
+                src={"/images/item/short/short3.png"}
+                layout='fill'
+                objectFit='cover'
+                onClick={clickShort}
+              />
+            </ShortContent>
+          </ShortBox>
+          <ShortBox>
+            <ShortContent>
+              <Image
+                alt=""
+                src={"/images/item/short/short5.png"}
+                layout='fill'
+                objectFit='cover'
+                onClick={clickShort}
+              />
+            </ShortContent>
+          </ShortBox>
+          <ShortBox>
+            <ShortContent>
+              <Image
+                alt=""
+                src={"/images/item/short/short2.jpeg"}
+                layout='fill'
+                objectFit='cover'
+                onClick={clickShort}
+              />
+            </ShortContent>
+          </ShortBox>
+          <ShortBox>
+            <ShortContent>
+              <Image
+                alt=""
+                src={"/images/item/short/short4.png"}
+                layout='fill'
+                objectFit='cover'
+                onClick={clickShort}
+              />
+            </ShortContent>
+          </ShortBox>
+        </ShortWrapper>
       </ShortcutCollection>
+      <DroppedContainer>
+        <DroppedTitleEn>Just Dropped</DroppedTitleEn>
+        <DroppedTitleKo>발매 상품</DroppedTitleKo>
+      </DroppedContainer>
     </Container>
   )
 }
@@ -133,10 +147,102 @@ const Container = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: white;
   padding-bottom: 50px;
 `
+const HeadImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  transition: all 0.5s;
+`
+const HeadImageBox = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s;
+`
+const HeadImage = styled.div`
+  float: left;
+  position: relative;
+  width: 25%;
+  height: 100%;
+`
+const ShortcutCollection = styled.div`
+  width: calc(100% - 30px);
+  height: auto;
+  padding: 12px 15px 20px 15px;
+`
+const ShortWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 20%;
+  transition: all 0.5s;
+  display: flex;
+`
+const ShortBox = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 20%;
+`
+const ShortContent = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+`
+const DroppedContainer = styled.div`
+  width: calc(100% - 30px);
+  height: auto;
+  padding: 12px 15px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-top: 1px solid #EDEDED;
+`
+const DroppedTitleEn = styled.p`
+  font-size: 1.4rem;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+`
+const DroppedTitleKo = styled.p`
+  font-size: 1.4rem;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  color: #808080;
+  margin-top: 4px;
+`
+// width == height (auto)
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+`
+const ContentBox = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+`
+
+// Height auto
 const MainImageContainer = styled.div`
   display: flex;
   width: 400%;
@@ -154,26 +260,6 @@ const AutoHeightImageWrapper = styled.div`
       height: auto !important;
     }
   };
-`
-const ShortcutCollection = styled.div`
-  width: calc(100% - 36px);
-  height: auto;
-  padding: 16px 18px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  gap: 8px;
-`
-const ShortcutItem = styled.div`
-  position: relative;
-  width: 100%;
-  height: 105px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
 `
 
 export default Home;
