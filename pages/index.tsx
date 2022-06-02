@@ -137,6 +137,28 @@ const Home: NextPage = () => {
       <DroppedContainer>
         <DroppedTitleEn>Just Dropped</DroppedTitleEn>
         <DroppedTitleKo>발매 상품</DroppedTitleKo>
+        <DroppedItemsBox>
+          <DroppedItem>
+            <DroppedImage>
+              <Image
+                alt=""
+                src={"/images/item/fendi-bag1.png"}
+                layout='fill'
+                objectFit='cover'
+              />
+            </DroppedImage>
+          </DroppedItem>
+          <DroppedItem>
+            <DroppedImage>
+              <Image
+                alt=""
+                src={"/images/item/hermes-bag1.png"}
+                layout='fill'
+                objectFit='cover'
+              />
+            </DroppedImage>
+          </DroppedItem>
+        </DroppedItemsBox>
       </DroppedContainer>
     </Container>
   )
@@ -224,6 +246,30 @@ const DroppedTitleKo = styled.p`
   font-family: 'NEXON Lv1 Gothic OTF';
   color: #808080;
   margin-top: 4px;
+`
+const DroppedItemsBox = styled.div`
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+`
+const DroppedItem = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+`
+const DroppedImage = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(50% - 3px);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ebf0f5;
 `
 // width == height (auto)
 const Wrapper = styled.div`
