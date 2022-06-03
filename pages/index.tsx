@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ArrowBackOutline, ArrowForwardOutline, ChevronBackOutline, ChevronForwardOutline } from "react-ionicons";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const container_Carousel:any = useRef();
@@ -138,26 +139,218 @@ const Home: NextPage = () => {
         <DroppedTitleEn>Just Dropped</DroppedTitleEn>
         <DroppedTitleKo>발매 상품</DroppedTitleKo>
         <DroppedItemsBox>
-          <DroppedItem>
-            <DroppedImage>
+          <Link href={"/shop"}>
+            <DroppedItemDiv>
+              <DroppedItem>
+                <DroppedImage>
+                  <Image
+                    alt=""
+                    src={"/images/item/fendi-bag1.png"}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </DroppedImage>
+              </DroppedItem>
+              <DroppedTitle>Fendi</DroppedTitle>
+              <DroppedName>남성 더플백</DroppedName>
+              <DroppedPrice>9,840,000원 <span>즉시 구매가</span></DroppedPrice>
+            </DroppedItemDiv>
+          </Link>
+          <Link href={"/shop"}>
+            <DroppedItemDiv>
+              <DroppedItem>
+                <DroppedImage>
+                  <Image
+                    alt=""
+                    src={"/images/item/hermes-bag1.png"}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </DroppedImage>
+              </DroppedItem>
+              <DroppedTitle>HERMES</DroppedTitle>
+              <DroppedName>엘러브레이싱볼리드45 블랙</DroppedName>
+              <DroppedPrice>47,350,090원 <span>즉시 구매가</span></DroppedPrice>
+            </DroppedItemDiv>
+          </Link>
+        </DroppedItemsBox>
+      </DroppedContainer>
+      <BannerWrapper>
+        <BannerContentBox>
+          <Image
+            alt=""
+            src={"/images/item/2022060311143200000007544.jpg"}
+            layout='fill'
+            objectFit='cover'
+          />
+        </BannerContentBox>
+      </BannerWrapper>
+      <FocusContainer>
+        <FocusTitleEn>Brand Focus</FocusTitleEn>
+        <FocusTitleKo>모두가 좋아하는 브랜드</FocusTitleKo>
+        <FocusWrapper>
+          <FocusBox>
+            <FocusImage>
               <Image
                 alt=""
-                src={"/images/item/fendi-bag1.png"}
+                src={"/images/brand/hermes.png"}
                 layout='fill'
-                objectFit='cover'
+                objectFit='contain'
               />
-            </DroppedImage>
-          </DroppedItem>
-          <DroppedItem>
-            <DroppedImage>
+            </FocusImage>
+            <FocusTitle>에르메스</FocusTitle>
+          </FocusBox>
+          <FocusBox>
+            <FocusImage>
               <Image
                 alt=""
-                src={"/images/item/hermes-bag1.png"}
+                src={"/images/brand/chanel.png"}
                 layout='fill'
-                objectFit='cover'
+                objectFit='contain'
               />
-            </DroppedImage>
-          </DroppedItem>
+            </FocusImage>
+            <FocusTitle>샤넬</FocusTitle>
+          </FocusBox>
+          <FocusBox>
+            <FocusImage>
+              <Image
+                alt=""
+                src={"/images/brand/rolex.png"}
+                layout='fill'
+                objectFit='contain'
+              />
+            </FocusImage>
+            <FocusTitle>롤렉스</FocusTitle>
+          </FocusBox>
+          <FocusBox>
+            <FocusImage>
+              <Image
+                alt=""
+                src={"/images/brand/louisvuitton.png"}
+                layout='fill'
+                objectFit='contain'
+              />
+            </FocusImage>
+            <FocusTitle>루이비통</FocusTitle>
+          </FocusBox>
+          <FocusBox>
+            <FocusImage>
+              <Image
+                alt=""
+                src={"/images/brand/cartier.png"}
+                layout='fill'
+                objectFit='contain'
+              />
+            </FocusImage>
+            <FocusTitle>까르띠에</FocusTitle>
+          </FocusBox>
+        </FocusWrapper>
+        <FocusWrapper>
+          <FocusBox>
+            <FocusImage>
+              <Image
+                alt=""
+                src={"/images/brand/apple.png"}
+                layout='fill'
+                objectFit='contain'
+              />
+            </FocusImage>
+            <FocusTitle>애플</FocusTitle>
+          </FocusBox>
+          <FocusBox>
+            <FocusImage>
+              <Image
+                alt=""
+                src={"/images/brand/prada.png"}
+                layout='fill'
+                objectFit='contain'
+              />
+            </FocusImage>
+            <FocusTitle>프라다</FocusTitle>
+          </FocusBox>
+          <FocusBox>
+            <FocusImage>
+              <Image
+                alt=""
+                src={"/images/brand/celine.png"}
+                layout='fill'
+                objectFit='contain'
+              />
+            </FocusImage>
+            <FocusTitle>셀린느</FocusTitle>
+          </FocusBox>
+          <FocusBox>
+            <FocusImage>
+              <Image
+                alt=""
+                src={"/images/brand/balenciaga.png"}
+                layout='fill'
+                objectFit='contain'
+              />
+            </FocusImage>
+            <FocusTitle>발렌시아가</FocusTitle>
+          </FocusBox>
+          <FocusBox>
+            <FocusImage>
+              <Image
+                alt=""
+                src={"/images/brand/thombrowne.png"}
+                layout='fill'
+                objectFit='contain'
+              />
+            </FocusImage>
+            <FocusTitle>톰브라운</FocusTitle>
+          </FocusBox>
+        </FocusWrapper>
+      </FocusContainer>
+      <BannerWrapper>
+        <BannerContentBox>
+          <Image
+            alt=""
+            src={"/images/2022053014074000000011886.png"}
+            layout='fill'
+            objectFit='cover'
+          />
+        </BannerContentBox>
+      </BannerWrapper>
+      <DroppedContainer>
+        <DroppedTitleEn>Upcoming Release</DroppedTitleEn>
+        <DroppedTitleKo>발매 예정</DroppedTitleKo>
+        <DroppedItemsBox>
+          <Link href={"/shop"}>
+            <DroppedItemDiv>
+              <DroppedItem>
+                <DroppedImage>
+                  <Image
+                    alt=""
+                    src={"/images/item/fendi-bag1.png"}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </DroppedImage>
+              </DroppedItem>
+              <DroppedTitle>Fendi</DroppedTitle>
+              <DroppedName>남성 더플백</DroppedName>
+              <DroppedPrice>9,840,000원 <span>즉시 구매가</span></DroppedPrice>
+            </DroppedItemDiv>
+          </Link>
+          <Link href={"/shop"}>
+            <DroppedItemDiv>
+              <DroppedItem>
+                <DroppedImage>
+                  <Image
+                    alt=""
+                    src={"/images/item/hermes-bag1.png"}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </DroppedImage>
+              </DroppedItem>
+              <DroppedTitle>HERMES</DroppedTitle>
+              <DroppedName>엘러브레이싱볼리드45 블랙</DroppedName>
+              <DroppedPrice>47,350,090원 <span>즉시 구매가</span></DroppedPrice>
+            </DroppedItemDiv>
+          </Link>
         </DroppedItemsBox>
       </DroppedContainer>
     </Container>
@@ -171,7 +364,7 @@ const Container = styled.div`
   flex-direction: column;
   /* overflow: hidden; */
   background-color: white;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 `
 const HeadImageWrapper = styled.div`
   position: relative;
@@ -230,7 +423,6 @@ const DroppedContainer = styled.div`
   width: calc(100% - 30px);
   height: auto;
   padding: 12px 15px;
-  margin-top: 12px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -238,21 +430,28 @@ const DroppedContainer = styled.div`
   border-top: 1px solid #EDEDED;
 `
 const DroppedTitleEn = styled.p`
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-family: 'NEXON Lv1 Gothic OTF Bold';
 `
 const DroppedTitleKo = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: 'NEXON Lv1 Gothic OTF';
   color: #808080;
   margin-top: 4px;
 `
 const DroppedItemsBox = styled.div`
   width: 100%;
-  padding: 12px 0;
   display: flex;
   justify-content: space-between;
   gap: 8px;
+`
+const DroppedItemDiv = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
 `
 const DroppedItem = styled.div`
   position: relative;
@@ -266,10 +465,104 @@ const DroppedImage = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(50% - 3px);
+  height: 100%;
   border-radius: 12px;
   overflow: hidden;
   background-color: #ebf0f5;
+`
+const DroppedTitle = styled.p`
+  padding-left: 15px;
+  font-size: 1.7rem;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+`
+const DroppedName = styled.p`
+  padding-left: 15px;
+  font-size: 1.4rem;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  margin-top: 4px;
+`
+const DroppedPrice = styled.p`
+  padding-left: 15px;
+  font-size: 1.4rem;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+  margin-top: 6px;
+  span{
+    font-family: 'NEXON Lv1 Gothic OTF';
+    color: rgb(99, 110, 114);
+    font-size: 1.2rem;
+  }
+`
+const BannerWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 60%;
+  margin-top: 25px;
+`
+const BannerContentBox = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(99, 110, 114);
+`
+const FocusContainer = styled.div`
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 15px 12px 15px;
+`
+const FocusTitleEn = styled.p`
+  font-size: 1.8rem;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+`
+const FocusTitleKo = styled.p`
+  font-size: 1.6rem;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  color: #808080;
+  margin-top: 4px;
+  margin-bottom: 6px;
+`
+const FocusWrapper = styled.div`
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+`
+const FocusBox = styled.div`
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`
+const FocusBox2 = styled.div`
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+  background-color: #141414;
+`
+const FocusImage = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+`
+const FocusTitle = styled.p`
+  margin-top: 10px;
+  font-size: 1.6rem;
 `
 // width == height (auto)
 const Wrapper = styled.div`
