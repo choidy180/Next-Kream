@@ -9,52 +9,34 @@ const Trending: NextPage = () => {
       <Nav/>
       <Container>
         <Box>
-          <MainImageContainer>
-            <AutoHeightImageWrapper>
-              <Image
-                alt=""
-                src={"/images/2022053014074000000011886.png"}
-                layout='fill'
-                objectFit='cover'
-                className="autoImage"
-              />
-            </AutoHeightImageWrapper>
-          </MainImageContainer>
-          <MainImageContainer>
-          <AutoHeightImageWrapper>
-            <Image
-              alt=""
-              src={"/images/item/short/short3.png"}
-              layout='fill'
-              objectFit='cover'
-              className="autoImage"
-            />
-          </AutoHeightImageWrapper>
-        </MainImageContainer>
+          {[1, 1, 1, 1, 1, 1, 1].map((_, i) => (
+            <MainImageContainer key={i}>
+              <AutoHeightImageWrapper>
+                <Image
+                  alt=""
+                  src={"/images/item/short/short3.png"}
+                  layout='fill'
+                  objectFit='cover'
+                  className="autoImage"
+                />
+              </AutoHeightImageWrapper>
+            </MainImageContainer>
+          ))}
         </Box>
         <Box>
-          <MainImageContainer>
-            <AutoHeightImageWrapper>
-              <Image
-                alt=""
-                src={"/images/item/short/short3.png"}
-                layout='fill'
-                objectFit='cover'
-                className="autoImage"
-              />
-            </AutoHeightImageWrapper>
-          </MainImageContainer>
-          <MainImageContainer>
-            <AutoHeightImageWrapper>
-              <Image
-                alt=""
-                src={"/images/2022053014074000000011886.png"}
-                layout='fill'
-                objectFit='cover'
-                className="autoImage"
-              />
-            </AutoHeightImageWrapper>
-          </MainImageContainer>
+          {[1,2,3,4,5,6,7,8,9].map((_, i) => (
+            <MainImageContainer key={i}>
+              <AutoHeightImageWrapper>
+                <Image
+                  alt=""
+                  src={"/images/2022053014074000000011886.png"}
+                  layout='fill'
+                  objectFit='cover'
+                  className="autoImage"
+                />
+              </AutoHeightImageWrapper>
+            </MainImageContainer>
+          ))}
         </Box>
       </Container>
     </>
@@ -72,6 +54,7 @@ const Container = styled.div`
 `
 const Box = styled.div`
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +65,8 @@ const Box = styled.div`
 const MainImageContainer = styled.div`
   display: flex;
   width: 100%;
-  transition: transform 0.5s;
+  border-radius: 12px;
+  overflow: hidden;
 `
 const AutoHeightImageWrapper = styled.div`
   float: left;

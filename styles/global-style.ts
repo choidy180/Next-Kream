@@ -35,7 +35,8 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0px;
         padding: 0px;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        height: auto;
         max-width: 576px;
         background-color: white;
     }
